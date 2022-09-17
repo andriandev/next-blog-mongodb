@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const DB = async () =>
   mongoose.connect(
-    'mongodb+srv://andriandev:Adikdancok1@andriandb.1fgncmh.mongodb.net/?retryWrites=true&w=majority'
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_URL}/?retryWrites=true&w=majority`
   );
 
 export default DB;

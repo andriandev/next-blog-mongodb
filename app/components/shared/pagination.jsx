@@ -7,7 +7,7 @@ function Pagination(props) {
     <nav className="mt-3">
       <ul className="pagination justify-content-center">
         <li className={`page-item${page <= 1 || !page ? ' disabled' : ''}`}>
-          <Link href={page <= 1 ? '/' : `/page/${page - 1}`}>
+          <Link href={page <= 2 ? '/' : `/page/${+page - 1}`}>
             <a className="page-link">&laquo; Prev</a>
           </Link>
         </li>

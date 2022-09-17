@@ -14,7 +14,7 @@ function Home(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const result = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/post/all_post`
   );
@@ -22,7 +22,7 @@ export async function getStaticProps() {
 
   const post = data.post;
 
-  if (!post) {
+  if (post.length === 0) {
     return {
       notFound: true,
     };
