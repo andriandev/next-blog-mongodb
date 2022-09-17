@@ -23,7 +23,7 @@ export async function getStaticProps(context) {
   const page = params.page_num;
 
   const result = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/post/all_post/${page}`
+    `${process.env.NEXT_API_URL}/api/post/all_post/${page}`
   );
   const data = await result.json();
 

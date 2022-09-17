@@ -39,7 +39,7 @@ function Post(props) {
 export async function getStaticProps(context) {
   const { params } = context;
   const result = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/post/${params.post_slug}`
+    `${process.env.NEXT_API_URL}/api/post/${params.post_slug}`
   );
   const data = await result.json();
 
