@@ -14,6 +14,8 @@ function PostItem(props) {
             src={`/assets/img/${image}`}
             className="card-img-top"
             alt={title}
+            placeholder="blur"
+            blurDataURL="/assets/img/loader.png"
           />
           <div className="card-body">
             <h5 className="card-title text-dark">{title}</h5>

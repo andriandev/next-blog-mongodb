@@ -23,6 +23,8 @@ function Post(props) {
                   src={`/assets/img/${post.image}`}
                   alt={post.title}
                   className="rounded"
+                  placeholder="blur"
+                  blurDataURL="/assets/img/loader.png"
                 />
               </div>
               <h1>{post.title}</h1>
